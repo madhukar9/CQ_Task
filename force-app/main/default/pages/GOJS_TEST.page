@@ -1,0 +1,36 @@
+<apex:page >
+    <apex:includeLightning />
+
+    <div id="GOJS_CMP" />
+     <div id="GOJS_Class_CMP" />
+     <div id="GOJS_Family" />
+
+    <script>
+        $Lightning.use("c:GOJS", function() {
+          $Lightning.createComponent("c:GOJS_CMP",
+              { label : "Press Me!" },
+              "GOJS_CMP",
+              function(cmp) {
+                console.log("button was created");
+                // do some stuff
+              }
+          );
+            $Lightning.createComponent("c:GOJS_Class_CMP",
+              { label : "Press Me!" },
+              "GOJS_Class_CMP",
+              function(cmp) {
+                console.log("button was created");
+                // do some stuff
+              }
+          );
+            $Lightning.createComponent("c:GOJS_Family",
+              { label : "Press Me!" },
+              "GOJS_Family",
+              function(cmp) {
+                console.log("button was created");
+                // do some stuff
+              }
+          );
+        });
+    </script>
+</apex:page>

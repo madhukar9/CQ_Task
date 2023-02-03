@@ -1,0 +1,5 @@
+<apex:page controller="displayImageExtension">
+    <apex:form >
+         <apex:image url="{!URLFOR($Action.Attachment.Download,FileId" />
+    </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="InsertAccount">
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:inputText label="Name" value="{!insertAccount.Name}"></apex:inputText>
+            
+            <apex:commandButton value="save" Action="{!SaveAccount}"/>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

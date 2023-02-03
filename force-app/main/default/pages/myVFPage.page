@@ -1,0 +1,7 @@
+<apex:page controller="myclass1" action="{!reloadmethod}">
+    <apex:form >
+    <apex:commandButton Value="Goto vf page" action="{!gotovfpage}">
+        
+        </apex:commandButton>
+    </apex:form>
+</apex:page>

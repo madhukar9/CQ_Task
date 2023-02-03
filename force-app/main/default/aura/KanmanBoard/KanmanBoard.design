@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="objName" Label="Object Name" description='object name'/>
+    <design:attribute name="displayFields" Label="Display Name" description='display name'/>
+    <design:attribute name="kanbanPicklistField" Label="Kanban Picklist Field" description='Kanban Picklist'/>
+</design:component>

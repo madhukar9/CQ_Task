@@ -1,0 +1,14 @@
+<!--<apex:page controller="DisplayAccounts" contentType="application/vnd.ms-excel#ContactsData.xls">-->
+    
+   <!-- <apex:page controller="DisplayAccounts" renderAs="PDF">-->
+        <apex:page controller="DisplayAccounts">
+    <apex:form >
+     <apex:pageBlock >
+        <apex:pageBlockTable value="{!accountRecords}" var="objContact">
+            <apex:column value="{!objContact.Name}"/>
+            <apex:column value="{!objContact.Phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+        <apex:commandButton value="Download Excel" action="{!downloadExcel}"/>
+        </apex:form>
+</apex:page>

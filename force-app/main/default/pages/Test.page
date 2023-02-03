@@ -1,0 +1,33 @@
+<apex:page controller="TestController" id="thePage">
+    
+    <apex:form id="fr1">
+        <table width="100%" cellpadding="4px" cellspacing="0px" style="border:0.5px solid black;" >
+            <tr>
+                <td>SI No</td>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>Sul</td>
+                <td>Action</td>
+            </tr>
+            <apex:repeat value="{!lstInner}" var="e1" id="therepeat">
+                <tr>
+                    <td style="border-top:0.5px solid black;">C{!e1.recCount}</td>
+                    <td style="border-top:0.5px solid black;"><apex:inputText value="{!e1.fristName}"/></td>
+                    <td style="border-top:0.5px solid black;"><apex:inputText value="{!e1.middleName}"/></td>
+                    <td style="border-top:0.5px solid black;"><apex:inputText value="{!e1.lastName}"/></td>
+                    <td style="border-top:0.5px solid black;"><apex:inputText value="{!e1.sul}"/></td>
+                    <td style="border-top:0.5px solid black;">
+                        <apex:commandButton value="X" action="{!Del}" rerender="fr1">
+                            <apex:param name="rowToBeDeleted" value="{!e1.recCount}" assignTo="{!selectedRowIndex}"></apex:param>
+                        </apex:commandButton>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        <center>
+        	<apex:commandbutton value="Add" action="{!Add}" rerender="fr1"/>
+        </center>
+    </apex:form>
+    
+</apex:page>
